@@ -7,6 +7,8 @@ package com.mycompany.vistas;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import com.mycompany.controlador.ControladorProfesores;
+
 /**
  *
  * @author Calavera
@@ -19,7 +21,9 @@ public class VProfesores extends javax.swing.JFrame {
     public VProfesores() {
    
         initComponents();
+         controlador = new ControladorProfesores(this);
     }
+    private ControladorProfesores controlador;
     // Método para agregar una fila a la tabla
     public void agregarFilaATabla(String id, String nombre, String correoPersonal,String correoInstitucional, String cedula,String escalafon, String sueldo) {
         DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
@@ -178,6 +182,11 @@ public class VProfesores extends javax.swing.JFrame {
         });
 
         jButton2Eliminar.setText("Eliminar");
+        jButton2Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2EliminarActionPerformed(evt);
+            }
+        });
 
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -194,6 +203,11 @@ public class VProfesores extends javax.swing.JFrame {
         });
 
         jButton5Agregar.setText("Agregar");
+        jButton5Agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5AgregarActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -234,11 +248,10 @@ public class VProfesores extends javax.swing.JFrame {
                             .addComponent(jTextNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                             .addComponent(jTextCorreoPersonal)
                             .addComponent(jTextCorreoInstitucional)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextID, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                .addComponent(jTextSueldo, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextEscalafon, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextCedula, javax.swing.GroupLayout.Alignment.LEADING))))
+                            .addComponent(jTextID, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                            .addComponent(jTextSueldo)
+                            .addComponent(jTextEscalafon)
+                            .addComponent(jTextCedula)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton2Eliminar)
@@ -325,10 +338,12 @@ public class VProfesores extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
+         controlador.buscarProfesor();
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void jButton4ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActualizarActionPerformed
         // TODO add your handling code here:
+         controlador.actualizarProfesor();
     }//GEN-LAST:event_jButton4ActualizarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -338,6 +353,16 @@ public class VProfesores extends javax.swing.JFrame {
         principal.setVisible(true);
         VProfesores.this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton5AgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5AgregarActionPerformed
+        // TODO add your handling code here:
+         controlador.agregarProfesor();
+    }//GEN-LAST:event_jButton5AgregarActionPerformed
+
+    private void jButton2EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2EliminarActionPerformed
+        // TODO add your handling code here:
+        controlador.eliminarProfesor();
+    }//GEN-LAST:event_jButton2EliminarActionPerformed
 
     /**
      * @param args the command line arguments

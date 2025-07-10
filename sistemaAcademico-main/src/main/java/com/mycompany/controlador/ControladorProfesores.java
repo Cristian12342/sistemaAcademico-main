@@ -16,7 +16,7 @@ public class ControladorProfesores {
 
     public ControladorProfesores(VProfesores vistaProfesor) {
         this.vistaProfesor = vistaProfesor;
-        this.iProfesores = new Profesores(50);
+        this.iProfesores = new Profesores(10);
     }
 
     private Escalafon identificarEscalafon(String escalafon) {
