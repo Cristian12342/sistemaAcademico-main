@@ -51,13 +51,13 @@
                       </Group>
                       <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jTextNombre" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Component id="jTextCorreoPersonal" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextCorreoInstitucional" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTextID" alignment="0" pref="115" max="32767" attributes="0"/>
+                          <Component id="jTextID" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Component id="jTextSueldo" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextEscalafon" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextCedula" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextNombre" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
