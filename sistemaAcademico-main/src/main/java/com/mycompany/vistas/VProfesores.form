@@ -54,12 +54,10 @@
                           <Component id="jTextNombre" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Component id="jTextCorreoPersonal" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextCorreoInstitucional" alignment="0" max="32767" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jTextID" alignment="0" pref="115" max="32767" attributes="0"/>
-                              <Component id="jTextSueldo" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextEscalafon" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextCedula" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jTextID" alignment="0" pref="115" max="32767" attributes="0"/>
+                          <Component id="jTextSueldo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextEscalafon" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextCedula" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -231,6 +229,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliminar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2EliminarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnBuscar">
       <Properties>
@@ -252,6 +253,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Agregar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5AgregarActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
